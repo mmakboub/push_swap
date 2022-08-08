@@ -6,16 +6,12 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:18:12 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/05/29 16:57:16 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/08 21:55:40 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
 
 int	ft_atoi(const char *str)
-
 {
 	int	i;
 	int	result;

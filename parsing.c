@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swaptest.c                                    :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/04 19:04:03 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/08 23:31:06 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-#include <stdio.h>
-# include <stdlib.h>
+#include"pushswap.h"
+
 
 int	ft_strlen(char *str)
 {
@@ -227,14 +226,26 @@ int	checking_array(char **str)
     	    y++;
     	}
 		long nbr = ft_atoi(str[i]);
-		if (nbr > 2147483647)
+		if (nbr > 2147483647 || nbr < INT_MIN)
 			return(printf("error4\n"), 0);
-    	i++;
+		i++;
 	}
 	return(1);
 }
+void	ft_putstr(char *s)
+{
+	int	i;
 
-int	check_double(char **str)
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+}
+int	checking_double(char **str)
 {
 	int i;
 	int j;
@@ -252,6 +263,19 @@ int	check_double(char **str)
 	}
 	return(1);
 }
+int checking_sorting(t_stack **stack_a)
+{
+	t_stack *temp;
+	temp = (*stack_a);
+	while(temp || temp->next)
+	{
+		printf("hiiiiii");
+		if (temp->data > temp->next->data)
+			return(ft_putstr("ur stck is sorted !!"), 0);
+		temp = temp->next;
+	}
+	return (1);
+}
 
 int main (int ac, char **av)
 {
@@ -260,11 +284,23 @@ int main (int ac, char **av)
 	int		i;
     int 	y;
 
-    i = 1;
+    i = 0;
     y = 0;
 	sep = " ";
 	str = ft_split(ft_strjoin(ac - 1, av + 1, sep), ' ');
 	checking_array(str);
-	if(!check_double(str))
+	checking_sorting(str);
+	if(!checking_double(str))
 		return(printf("error1\n"), 0);
+	while(str[i])
+	{
+		y =  0;
+		while(str[i][y])
+		{
+			printf("tab[%d][%d] = %c\n", i,y, str[i][y]);
+			y++;
+		}
+		i++;
+	}
+	return (0);
 }
