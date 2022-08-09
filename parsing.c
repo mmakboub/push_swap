@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/08 23:31:06 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/09 02:37:33 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	dest[i + j] = '\0';
 	return (dest);
-}
+}`
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
@@ -263,15 +263,16 @@ int	checking_double(char **str)
 	}
 	return(1);
 }
-int checking_sorting(t_stack **stack_a)
+int checking_sorting(t_stack *stack_a)
 {
 	t_stack *temp;
-	temp = (*stack_a);
-	while(temp || temp->next)
+	temp = stack_a;
+	//printf("hiiiiii");
+	while(temp && temp->next)
 	{
-		printf("hiiiiii");
+		//printf("hiiiiii1");
 		if (temp->data > temp->next->data)
-			return(ft_putstr("ur stck is sorted !!"), 0);
+			return(0);
 		temp = temp->next;
 	}
 	return (1);
@@ -289,7 +290,10 @@ int main (int ac, char **av)
 	sep = " ";
 	str = ft_split(ft_strjoin(ac - 1, av + 1, sep), ' ');
 	checking_array(str);
-	checking_sorting(str);
+	//printf("mariam hmara\n");
+	//printf("mariam hmara1\n");
+	if(!checking_sorting(str))
+		return(ft_putstr("ur stck is sorted !!"), 0);
 	if(!checking_double(str))
 		return(printf("error1\n"), 0);
 	while(str[i])
