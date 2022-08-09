@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/09 02:37:33 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/09 17:36:29 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strcat(char *dest, char *src)
 	}
 	dest[i + j] = '\0';
 	return (dest);
-}`
+}
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
@@ -271,11 +271,11 @@ int checking_sorting(t_stack *stack_a)
 	while(temp && temp->next)
 	{
 		//printf("hiiiiii1");
-		if (temp->data > temp->next->data)
-			return(0);
+		if (temp->data < temp->next->data || temp->data != temp->next->data)
+			return(1);
 		temp = temp->next;
 	}
-	return (1);
+	return (0);
 }
 
 int main (int ac, char **av)
@@ -290,12 +290,12 @@ int main (int ac, char **av)
 	sep = " ";
 	str = ft_split(ft_strjoin(ac - 1, av + 1, sep), ' ');
 	checking_array(str);
-	//printf("mariam hmara\n");
+	//printf("mariam CUTE\n");
 	//printf("mariam hmara1\n");
-	if(!checking_sorting(str))
-		return(ft_putstr("ur stck is sorted !!"), 0);
 	if(!checking_double(str))
 		return(printf("error1\n"), 0);
+	if(checking_sorting(str))
+		return(ft_putstr("ur stck is sorted !!"), 0);
 	while(str[i])
 	{
 		y =  0;

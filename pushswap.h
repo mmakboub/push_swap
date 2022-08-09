@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/08 21:59:52 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:56:41 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ typedef struct s_stack{
 }t_stack;
 int	ft_strlen(char *str);
 int	ft_atoi(const char *str);
+char	*ft_strjoin(int size, char **strs, char *sep);
