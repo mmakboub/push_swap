@@ -68,7 +68,9 @@ Concerning sort algo u must choice the algo that's easy for to manipulate it and
 
 So first thing u should do is : parsing 
 when i say parsing i mean for example: some arguments are not integers, or the arguments are duplicates, some arguments are bigger than an integer . then put numbers in the stack A if no errors are detected.
+
 Second : u should Check if the numbers in A are all sorted. If so, end the program without printing anything.
+
 third : There are 4 main test cases that u should cover. The cases are 3, 5, 100, and 500. Each case requires to be handled differently :
 With 3 numbers, we need to sort it with not more than 3 instructions.
 With 5 numbers, we need to sort it with not more than 12 instructions.
