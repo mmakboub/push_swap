@@ -36,6 +36,7 @@ pb (push b) : Top number in A goes to top of B
   𝕖𝕩𝕖𝕞𝕡𝕝𝕖
   
    We are going to take l_a = [1, 2, 3, 4, 5] and l_b = [] (empty).
+   
     sa: l_a = [2, 1, 3, 4, 5]
     sb: l_b = []
     sc: l_a = [2, 1, 3, 4, 5] and l_b = []
@@ -88,6 +89,7 @@ With 500 numbers, we can get :
 	1 points if the size of the list of instructions is less than 11500
 
 so to handle those cases i'll advice u to read those articles :
+
 	https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 	
 	https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
