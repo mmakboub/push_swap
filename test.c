@@ -6,25 +6,19 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/11 02:05:16 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/11 17:13:05 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
 
-void push(int value, t_stack **head)
+void push(int value, t_stack **head1, t_stack **head2)
 {
-	t_stack *new;
-	new = (t_stack *)malloc(sizeof(t_stack));
-	new->data = value;
-	if(*head == NULL)
-	{
-		new->next = NULL;
-		*head = new;
-	}
-	else
-		new->next = *head;
-	*head = new;
+	t_stack *temp;
+	temp = *head1;
+	*head1 = temp->next;
+	temp->next = *head2;
+	*head2 = temp;
 }
 void	ft_swap(int *x , int *y, t_stack *head)
 {
