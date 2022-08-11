@@ -10,7 +10,7 @@ Within your mandatory part you are allowed to use the following functions:
 ◦ exit
 
 And here is the list of instructions that we can perform :
-{{
+
 sa (swap a) : Swap the top two numbers in A
 
 sb (swap b) : Swap the top two numbers in B
@@ -58,8 +58,6 @@ pb (push b) : Top number in A goes to top of B
     rrb: l_b = []
     
     rrr: l_a = [5, 2, 1, 3, 4] and l_b = []
-    
-}}
 
 The project can be done by multiple different way:
 
