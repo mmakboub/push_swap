@@ -36,17 +36,29 @@ pb (push b) : Top number in A goes to top of B
   #𝕖𝕩𝕖𝕞𝕡𝕝𝕖
   
    We are going to take l_a = [1, 2, 3, 4, 5] and l_b = [] (empty).
+   
     sa: l_a = [2, 1, 3, 4, 5]
+    
     sb: l_b = []
+    
     sc: l_a = [2, 1, 3, 4, 5] and l_b = []
+    
 	pb: l_a = [1, 2, 3, 4, 5] and l_b = []
+	
     pb: l_a = [2, 3, 4, 5] and l_b = [1]
+    
     ra: l_a = [2, 3, 4, 5, 1]
+    
     rb: l_b = []
+    
     rr: l_a = [2, 3, 4, 5, 1] and l_b = []
+    
     rra: l_a = [5, 1, 2, 3, 4]
+    
     rrb: l_b = []
+    
     rrr: l_a = [5, 2, 1, 3, 4] and l_b = []
+    
 }}
 
 The project can be done by multiple different way:
