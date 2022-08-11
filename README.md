@@ -54,6 +54,7 @@ The project can be done by multiple different way:
     By using doubly circular linked list.
 
 Concerning sort algo u must choice the algo that's easy for to manipulate it and code it so there are some sorting algorithmes :
+
 	- Radix sort;
 	- Quicksort;
 	- longest increasing subsequence;
@@ -67,12 +68,19 @@ third : There are 4 main test cases that u should cover. The cases are 3, 5, 100
 With 3 numbers, we need to sort it with not more than 3 instructions.
 With 5 numbers, we need to sort it with not more than 12 instructions.
 With 100 numbers, we can get :
+
 	5 points if the size of the list of instructions is less than 700
+	
 	4 points if the size of the list of instructions is less than 900
+	
 	3 points if the size of the list of instructions is less than 1100
+	
 	2 points if the size of the list of instructions is less than 1300
+	
 	1 points if the size of the list of instructions is less than 1500
+	
 With 500 numbers, we can get
+
 	5 points if the size of the list of instructions is less than 5500
 	4 points if the size of the list of instructions is less than 7000
 	3 points if the size of the list of instructions is less than 8500
