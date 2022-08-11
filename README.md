@@ -2,6 +2,7 @@
 The Push_swap project is a very simple and highly effective algorithm project: data will need to be sorted. You have at your disposal a set of int values, 2 stacks and a set of instructions to manipulate both stacks. so The main goal is to sort data on a stack, The idea is simple, You have two stacks called Stack A and Stack B. Stack A is given a random list of unorganized numbers. You must take the random list of numbers in Stack A and sort them so that Stack A is organized from smallest to largest with a limited set of instructions, using the lowest possible number of actions(sa, sb, ss, ra, rb, rr, rra, rrb, rrr, pa, pb). To succeed you’ll have to manipulate various types of algorithms and choose the one (of many) most appropriate solution for an optimized data sorting.
 
 Within your mandatory part you are allowed to use the following functions:
+
 ◦ write
 ◦ read
 ◦ malloc
@@ -31,7 +32,9 @@ rrr : rra + rrb
 pa (push a) : Top number in B goes to top of A
 
 pb (push b) : Top number in A goes to top of B
+
   #𝕖𝕩𝕖𝕞𝕡𝕝𝕖
+  
    We are going to take l_a = [1, 2, 3, 4, 5] and l_b = [] (empty).
     sa: l_a = [2, 1, 3, 4, 5]
     sb: l_b = []
@@ -88,6 +91,7 @@ With 500 numbers, we can get
 	1 points if the size of the list of instructions is less than 11500
 
 so to handle those cases i'll advice u to read those articles :
+
 	https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 	https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e
 	https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
