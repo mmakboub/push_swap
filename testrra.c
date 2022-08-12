@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 22:42:09 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/12 19:39:16 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/12 23:30:44 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,42 @@
         }           
      }
  }
+ void	ft_lstadd_front(t_list **alst, t_list *new)
+
+{
+	new -> next = *alst;
+	*alst = new;
+}
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	if (!lst || !del)
+		return ;
+	else
+	{
+		del(lst -> content);
+		free(lst);
+	}
+}
+ void rra(t_stack	**stack_a)
+ {
+	 t_stack    *top;
+     t_stack    *end;
+     top = *stack_a;
+     while (top)
+     {
+        if(top->next != NULL)
+            top = top->next;
+        else
+        {
+            end = *stack_a;
+            ft_lstadd_front(&top , end)
+            ft_lstdelone(end, free(end))
+            break;
+        }           
+     }
+ }
+
+ 
  int main ()
 {
 	t_stack	*temp;

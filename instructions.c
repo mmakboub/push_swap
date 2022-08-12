@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   instructions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/11 17:13:05 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/12 19:47:48 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,25 @@ void push(int value, t_stack **head1, t_stack **head2)
 	temp->next = *head2;
 	*head2 = temp;
 }
+void    ra(t_stack **stack_a)
+ {
+     t_stack    *top;
+     t_stack    *temp;
+     top = *stack_a;
+     while (top)
+     {
+        if(top->next != NULL)
+            top = top->next;
+        else
+        {
+            temp = *stack_a;
+            *stack_a = top->next;
+            top->next = temp;
+            temp->next = NULL;
+            break;
+        }           
+     }
+ }
 void	ft_swap(int *x , int *y, t_stack *head)
 {
 	int swap;
