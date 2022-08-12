@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/11 02:47:08 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/11 17:19:14 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	sorting3max(t_stack *head , int size)
 		if(head->data > head->next->data)
 		{
 			if(head->next->data < head->next->next->data)
-				swap(head->data, head->next->data, head)
+				swap(head->data, head->next->data, head); 
 			else
 			{
 				swap(head->data , head->next->data);
