@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/12 22:06:52 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/13 00:30:34 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_lstsize(t_stack *lst)
 	}
 	return (len);
 }
-void	sorting3max(t_stack **head , int size)
+void	sorting5max(t_stack **head , int size)
 {
 	size = lstsize(*head);
 	if(size == 1)
@@ -41,7 +41,7 @@ void	sorting3max(t_stack **head , int size)
 			else
 			{
 				swap((*head)->data , (*head)->next->data);
-				rra();
+				rra(head);
 			}
 		}
 		if((*head)->data > (*head)->next->data && (*head)->next->data < (*head)->next->next->data)
@@ -49,4 +49,6 @@ void	sorting3max(t_stack **head , int size)
 		if ((*head)->data < (*head)->next->data && (*head)->next->data > (*head)->next->next->data)
 			ra(head);
 	}
+	else 
+		sortin5(head, size);
 }
