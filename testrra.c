@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 22:42:09 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/13 23:18:28 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/14 21:08:02 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@
 		top = top->next;
 	 }
  }
- void	ft_lstadd_front(t_stack **alst, t_stack *new)
-{
-	new -> next = *alst;
-	*alst = new;
-}
 
  void rra(t_stack    **stack_a)
  {

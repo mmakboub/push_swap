@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:25:51 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:27:28 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/14 20:59:35 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (my_str);
 }
-char	*ft_substr(char *s, unsigned int start, size_t len)
 
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	firstc;
 	char	*newstr;
