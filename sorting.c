@@ -6,33 +6,18 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/13 00:30:34 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/14 20:20:51 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
 
-int	ft_lstsize(t_stack *lst)
-
+void	sorting5max(t_stack **head , int lenght)
 {
-	int	len;
 
-	len = 0;
-	while (lst)
-	{
-		lst = lst -> next;
-		len++;
-	}
-	return (len);
-}
-void	sorting5max(t_stack **head , int size)
-{
-	size = lstsize(*head);
-	if(size == 1)
-		exit(0);
-	if(size == 2 && (*head)->data > (*head)->next->data)
+	if(lenght == 2 && (*head)->data > (*head)->next->data)
 		swap((*head)->data, (*head)->next->data, (*head));
-	if(size == 3)
+	if(lenght == 3)
 	{
 		if((*head)->data > (*head)->next->data)
 		{
@@ -49,6 +34,4 @@ void	sorting5max(t_stack **head , int size)
 		if ((*head)->data < (*head)->next->data && (*head)->next->data > (*head)->next->next->data)
 			ra(head);
 	}
-	else 
-		sortin5(head, size);
 }

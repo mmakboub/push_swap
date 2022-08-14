@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/13 15:53:35 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/14 20:20:06 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,6 @@ void push(int value, t_stack **head1, t_stack **head2)
 	temp->next = *head2;
 	*head2 = temp;
 }
-void    ra(t_stack **stack_a)
- {
-     t_stack    *top;
-     t_stack    *temp;
-     top = *stack_a;
-     while (top)
-     {
-        if(top->next != NULL)
-            top = top->next;
-        else
-        {
-            temp = *stack_a;
-            *stack_a = top->next;
-            top->next = temp;
-            temp->next = NULL;
-            break;
-        }           
-     }
- }
 void	ft_swap(int *x , int *y, t_stack *head)
 {
 	int swap;
@@ -49,25 +30,43 @@ void	ft_swap(int *x , int *y, t_stack *head)
 		*y = swap;
 	}
 }
-void printfList(t_stack *temp)
-{
-	while(temp != NULL)
-	{
-		printf("Element on top: %c\n", temp -> data);
-		temp = temp->next;
-	}
-}
-t_stack	*ft_lstnew(int *data)
-{
-	t_stack	*newelement;
-
-	newelement = (t_stack *)malloc(sizeof(t_stack));
-	if (newelement == 0)
-		return (0);
-	newelement->data = *data;
-	newelement->next = 0;
-	return (newelement);
-}
+void    ra(t_stack **stack_a)
+ {
+     t_stack    *top;
+     t_stack    *tmp;
+	 tmp = *stack_a;
+     top = *stack_a;
+    while (top)
+     {
+        if (top->next == NULL)
+        {
+            *stack_a = tmp->next;
+        	top->next = tmp;
+            tmp->next = NULL;
+            break;
+        }  
+		top = top->next;
+	 }
+ }
+ 
+ void rra(t_stack    **stack_a)
+ {
+     t_stack    *top;
+     t_stack    *end;
+     top = *stack_a;
+     while (top)
+     {
+        if(top->next->next != NULL)
+            top = top->next;
+        else
+        {
+            end = top ->next;
+            top->next = NULL;
+            ft_lstadd_front(stack_a , end);
+            break;
+        }           
+     }
+ }
 
 int main ()
 {
