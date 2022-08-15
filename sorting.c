@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 17:04:14 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 23:25:43 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,36 @@
 void	sorting3(t_stack **head , int lenght)
 {
 
-	if(lenght == 2 && (*head)->data > (*head)->next->data)
-		swap((*head)->data, (*head)->next->data, (*head));
+	if(lenght == 2 && (*head)->data > (*head)->next->data){
+		ft_swap(&(*head)->data, &(*head)->next->data, head,"sa\n");
+	}
 	if(lenght == 3)
 	{
 		if((*head)->data > (*head)->next->data)
 		{
 			if((*head)->next->data < (*head)->next->next->data)
-				swap((*head)->data, (*head)->next->data, (*head)); 
+				{
+					if((*head)->data < (*head)->next->next->data)
+						ft_swap(&(*head)->data ,&(*head)->next->data, head, "sa\n");
+					else
+						ra(head, "ra\n");
+				}
 			else
 			{
-				swap((*head)->data , (*head)->next->data);
-				rra(head);
+				ft_swap(&(*head)->data ,&(*head)->next->data, head, "sa\n");
+				rra(head, "rra\n");
 			}
 		}
-		if((*head)->data > (*head)->next->data && (*head)->next->data < (*head)->next->next->data)
-			rra(head);
-		if ((*head)->data < (*head)->next->data && (*head)->next->data > (*head)->next->next->data)
-			ra(head);
+		else if ((*head)->data < (*head)->next->data && (*head)->next->data > (*head)->next->next->data)
+		{
+			if((*head)->data < (*head)->next->next->data)
+			{
+				ft_swap(&(*head)->data, &(*head)->next->data, head,"sa\n");
+				ra(head, "ra\n");
+			}
+			else
+				rra(head, "rra\n");
+				
+		}
 	}
 }

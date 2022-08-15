@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:13:52 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:27:11 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 21:38:56 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void	ft_lstadd_front(t_stack **alst, t_stack *new)
 	*alst = new;
 }
 
-t_stack	*ft_lstnew(int *data)
+t_stack	*ft_lstnew(int data)
 {
 	t_stack	*newelement;
 
 	newelement = (t_stack *)malloc(sizeof(t_stack));
 	if (newelement == 0)
 		return (0);
-	newelement->data = *data;
+	newelement->data = data;
 	newelement->next = 0;
 	return (newelement);
 }

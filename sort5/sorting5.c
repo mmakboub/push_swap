@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 00:43:35 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 18:54:17 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 20:43:25 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
  {
 	 int indice;
 	 int min;
+	 t_stack	*top;
 	 indice = 1;
+	 top = head;
 	 while(head)
 	 {
 		 if(indice = 1)
@@ -28,21 +30,21 @@
 		 	if(min > head->data)
 			 	min = head->data;
 		 }
-		 head = head->next;
+		top = top->next;
 	 }
-	 printf("minimum element is : %d\n", min);
+	 return(min);
  }
 
 
-void sorting5(t_stack	*stack_a, t_stack	*stack_b, int	len);
+void sorting5(t_stack	*stack_a, t_stack	*stack_b, int	len)
 {
 	int minvalue;
 	if (len == 4)
 	{
 		minvalue = finding_min(stack_a);
-		push_b(minvalue, &stack_a, &stack_b)
-		sorting3(&stack_a, 3)
-		push_a(minvalue, &stack_b, &stack_a)
+		push_b(minvalue, &stack_a, &stack_b);
+		sorting3(&stack_a, 3);
+		push_a(minvalue, &stack_b, &stack_a);
 	}
 	
 }

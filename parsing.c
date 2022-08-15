@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:27:05 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 22:28:14 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ int checking_sorting(t_stack *stack_a)
 	while(temp && temp->next)
 	{
 		//printf("hiiiiii1");
-		if (temp->data < temp->next->data || temp->data != temp->next->data)
-			return(1);
+		if (temp->data > temp->next->data)
+			return(0);
 		temp = temp->next;
 	}
-	return (0);
+	return (1);
 }

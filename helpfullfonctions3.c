@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:25:51 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:59:35 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 21:17:53 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	return (newstr);
 }
 
-static size_t	ft_total(char const *s, char c)
+size_t	ft_total(char const *s, char c)
 {
 	size_t	n_wrd;
 
@@ -104,7 +104,7 @@ static size_t	ft_total(char const *s, char c)
 	return (n_wrd);
 }
 
-static char	**ft_free(char **str, int c)
+char	**ft_free(char **str, int c)
 {
 	while (c--)
 	{
