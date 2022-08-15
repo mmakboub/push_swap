@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 23:29:12 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 23:32:20 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void push(t_stack **head1, t_stack **head2)
 	temp->next = *head2;
 	*head2 = temp;
 }
-void	ft_swap(int *x , int *y, t_stack **head, char *str)
+void	ft_swap(t_stack **head, char *str)
 {
 	int swap;
 	

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 23:25:43 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 23:33:27 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sorting3(t_stack **head , int lenght)
 {
 
 	if(lenght == 2 && (*head)->data > (*head)->next->data){
-		ft_swap(&(*head)->data, &(*head)->next->data, head,"sa\n");
+		ft_swap(head,"sa\n");
 	}
 	if(lenght == 3)
 	{
@@ -25,13 +25,13 @@ void	sorting3(t_stack **head , int lenght)
 			if((*head)->next->data < (*head)->next->next->data)
 				{
 					if((*head)->data < (*head)->next->next->data)
-						ft_swap(&(*head)->data ,&(*head)->next->data, head, "sa\n");
+						ft_swap(head, "sa\n");
 					else
 						ra(head, "ra\n");
 				}
 			else
 			{
-				ft_swap(&(*head)->data ,&(*head)->next->data, head, "sa\n");
+				ft_swap(head, "sa\n");
 				rra(head, "rra\n");
 			}
 		}
@@ -39,7 +39,7 @@ void	sorting3(t_stack **head , int lenght)
 		{
 			if((*head)->data < (*head)->next->next->data)
 			{
-				ft_swap(&(*head)->data, &(*head)->next->data, head,"sa\n");
+				ft_swap(head,"sa\n");
 				ra(head, "ra\n");
 			}
 			else

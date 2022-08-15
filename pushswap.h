@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 22:23:33 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 23:32:30 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int 			checking_sorting(t_stack *stack_a);
 void   			ra(t_stack **stack_a, char *str);
 void 			rra(t_stack    **stack_a, char *str);
 void 			push(t_stack **head1, t_stack **head2);
-void			ft_swap(int *x , int *y, t_stack **head , char *str);
+void			ft_swap(t_stack **head , char *str);
 char	**ft_free(char **str, int c);
 size_t	ft_total(char const *s, char c);
