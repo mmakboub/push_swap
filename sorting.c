@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 21:04:54 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:04:14 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	sorting3(t_stack **head , int lenght)
 			}
 		}
 		if((*head)->data > (*head)->next->data && (*head)->next->data < (*head)->next->next->data)
-			rra();
+			rra(head);
 		if ((*head)->data < (*head)->next->data && (*head)->next->data > (*head)->next->next->data)
 			ra(head);
 	}

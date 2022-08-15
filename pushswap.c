@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:18:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:20:57 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/15 18:48:35 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int main (int argc, char **argv)
 		checking_array(str);
 		if(!checking_double(str))
 			return(printf("error1\n"), 0);
-		if(checking_sorting(str))
-			exit(0);
 		add_to_stack(&stack_a, str);
+		if(checking_sorting(stack_a))
+			exit(0);
 		if(len == 1 || len == 0)
 			exit(0);
 		if(len == 2 || len == 3)
