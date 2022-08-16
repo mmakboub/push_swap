@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 23:32:30 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:28:32 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <limits.h>
 typedef struct s_stack{
 	int data;
+	int index;
 	struct s_stack *next;
 }t_stack;
 int				ft_strlen(char *str);
@@ -41,7 +42,7 @@ int				checking_double(char **str);
 int 			checking_sorting(t_stack *stack_a);
 void   			ra(t_stack **stack_a, char *str);
 void 			rra(t_stack    **stack_a, char *str);
-void 			push(t_stack **head1, t_stack **head2);
+void 			push(t_stack **head1, t_stack **head2, char *str);
 void			ft_swap(t_stack **head , char *str);
-char	**ft_free(char **str, int c);
-size_t	ft_total(char const *s, char c);
+char			**ft_free(char **str, int c);
+size_t			ft_total(char const *s, char c);

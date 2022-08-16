@@ -6,19 +6,20 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 23:32:20 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:27:34 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
 
-void push(t_stack **head1, t_stack **head2)
+void push(t_stack **head1, t_stack **head2, char *str)
 {
 	t_stack *temp;
 	temp = *head1;
 	*head1 = temp->next;
 	temp->next = *head2;
 	*head2 = temp;
+	printf("%s", str);
 }
 void	ft_swap(t_stack **head, char *str)
 {
