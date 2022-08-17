@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 22:42:09 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 22:21:58 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/16 20:56:06 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,55 +71,56 @@ void	ft_lstadd_front(t_stack **alst, t_stack *new)
 	*head2 = temp;
 }
 
+int finding_min(t_stack	**stack_a)
+ {
+	 int indice;
+	 int min;
+	 t_stack	*top;
+	 indice = 1;
+	 top = *stack_a;
+	 printf("mariam");
+	 while(stack_a)
+	 {
+		 if(indice == 1)
+		 {
+			 min = (*stack_a)->data;
+			 indice = 0;
+		 }
+		 else 
+		 {
+		 	if(min > (*stack_a)->data)
+			 	min = (*stack_a)->data;
+		 }
+		top = top->next;
+	 }
+	 return(min);
+ }
  
  int main ()
 {
-	t_stack	*temp;
-	t_stack	*tmp;
+	
+
 	t_stack *node1;
 	t_stack	*node2;
 	t_stack	*node3;
 	t_stack	*node4;
-	/*t_stack	*noeud1;
-	t_stack	*noeud2;
-	t_stack	*noeud3;
-	t_stack	*noeud4;*/
+
 	node1 = (t_stack *)malloc(sizeof(t_stack));
 	node2 = (t_stack *)malloc(sizeof(t_stack));
 	node3 = (t_stack *)malloc(sizeof(t_stack));
 	node4 = (t_stack *)malloc(sizeof(t_stack));
-	/*noeud1 = (t_stack *)malloc(sizeof(t_stack));
-	noeud2 = (t_stack *)malloc(sizeof(t_stack));
-	noeud3 = (t_stack *)malloc(sizeof(t_stack));
-	noeud4 = (t_stack *)malloc(sizeof(t_stack));*/
+
 	node1->data = 1;
 	node2->data = 2;
 	node3->data = 4;
 	node4->data = 6;
-	/*noeud1->data = 5;
-	noeud2->data = 25;
-	noeud3->data = 4;
-	noeud4->data = 6;*/
+	
 	
 	node1->next = node2;
     node2->next = node3;
     node3->next = node4;
+    printf("mariam");
     node4->next = NULL;
-    /*noeud1->next = noeud2;
-    noeud2->next = noeud3;
-    noeud3->next = noeud4;
-    noeud4->next = NULL;*/
-	rra(&node1);
-	tmp = node1;
-	while(tmp)
-    {   
-        printf("%d\n", tmp->data);
-        tmp = tmp->next;
-    }
-	/*temp = noeud1;
-	while(temp)
-    {   
-        printf("  \n%d", temp->data);
-        temp = temp->next;
-    }*/
+	finding_min(&node1);
+
 }

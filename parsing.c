@@ -6,12 +6,11 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 22:28:14 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/17 22:00:24 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
-
 
 int	checking_array(char **str)
 {

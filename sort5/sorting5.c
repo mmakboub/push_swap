@@ -6,17 +6,20 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 00:43:35 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/16 17:43:19 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/18 00:08:41 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
- int finding_min(t_stack	*stack_a)
+ 
+int finding_min(t_stack	*stack_a)
  {
 	 int indice;
+	 int index;
 	 int min;
 	 t_stack	*top;
 	 indice = 1;
+	 index = 0;
 	 top = stack_a;
 	 while(stack_a)
 	 {
@@ -28,56 +31,81 @@
 		 else 
 		 {
 		 	if(min > stack_a->data)
+			 {
 			 	min = stack_a->data;
+				index= stack_a->index; 
+			 }
+				 
 		 }
 		top = top->next;
 	 }
-	 return(min);
+	 return(index);
  }
-
-int		findingindex(t_stack	*stack_a)
-{
-	int	i;
-	t_stack *head;
-
-	i = 0;
-	head = stack_a;
-	while(head)
-	{
-		head->index = i;
-		head = head->next;
-		i++;	
-	}
-	return(head->index)
-}
 
 void sorting5(t_stack	*stack_a, t_stack	*stack_b, int	len)
 {
-	int minvalue;
+	int value;
+	int	minvalue;
+	int x;
+	
+	minvalue = finding_min(stack_a);
+	value = len/2;
+	x = len - minvalue;
 	if (len == 4)
 	{
-		minvalue = finding_min(stack_a);
-		if(stack_a->indexmin == 0) 
-			push(&stack_a, &stack_b, "pa\n");
-		else if (stack_a->indexmin == 1)
+		if(value > minvalue)
 		{
-			ft_swap(&stack_a, "sa\n");
-			push(&stack_a, &stack_b, "pa\n");
+			while(minvalue--)
+				ra(&stack_a, "ra\n");
 		}
-		else if (stack_a->index == 2)
+		else
 		{
-			ra(&stack_a, "ra\n");
-			ft_swap(&stack_a, "sa\n");
-			push(&stack_a, &stack_b, "pa\n");
-			
+			while(x--)
+				rra(&stack_a, "rra\n");
 		}
-		else if (stack_a->indexmin == 3)
-				{
-					rra(&stack_a, "rra\n");
-					push(&stack_a, &stack_b, "pa\n");
-				}
+		push(&stack_a, &stack_b, "pb\n");
 		sorting3(&stack_a, 3);
-		push_a(&stack_b, &stack_a);
+		push(&stack_b, &stack_a, "pa\n");
+	}
+}
+	
+		// {
+		// 	push(&stack_a, &stack_b, "pa\n");
+		// 	sorting3(&stack_a, 3);
+		// }
+			
+		// else if (minvalue == 1)
+		// {
+		// 	ft_swap(&stack_a, "sa\n");
+		// 	push(&stack_a, &stack_b, "pa\n");
+		// 	if(!checking_sorting(stack_a))
+		// 	{
+		// 		sorting3(&stack_a, 3);
+		// 		push(&stack_b, &stack_a, "pa\n");
+		// 	}
+		// 	else
+		// 		push(&stack_b, &stack_a, "pa\n");
+		// }
+		// else if (minvalue == 2)
+		// {
+		// 	ra(&stack_a, "ra\n");
+		// 	ft_swap(&stack_a, "sa\n");
+		// 	push(&stack_a, &stack_b, "pa\n");
+		// 	if(!checking_sorting(stack_a))
+		// 		sorting3(&stack_a, 3);
+		// 	else
+		// 		push(&stack_b, &stack_a, "pa\n");
+		// }
+		// else if (minvalue == 3)
+		// 		{
+		// 			rra(&stack_a, "rra\n");
+		// 			push(&stack_a, &stack_b, "pa\n");
+		// 			if(!checking_sorting(stack_a))
+		// 				sorting3(&stack_a, 3);
+						
+		// 			else
+		// 				push(&stack_b, &stack_a, "pa\n");
+		// 		}
 	}
 	else
 		
