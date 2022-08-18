@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/16 17:27:34 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/18 20:52:08 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,20 @@ void    ra(t_stack **stack_a, char *str)
         }           
      }
 	printf("%s", str);
+ }
+ 
+ void	indexing(t_stack *stack_a)
+ {
+	 int i;
+	 i = 0;
+	 t_stack *top;
+	 top = stack_a;
+	 while(top)
+	 {
+		 top->index = i;
+		 top = top->next;
+		 i++;
+	 }
  }
 
 // int main ()
