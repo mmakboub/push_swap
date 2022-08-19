@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/19 18:32:10 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/19 19:18:09 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_stack{
 	struct s_stack	*next;
 }t_stack;
 
-int				ft_strlen(char *str);
+size_t			ft_strlen(const char *str);
 int				ft_atoi(const char *str);
 char			*ft_strjoin(int size, char **strs, char *sep);
 int				ft_lstsize(t_stack *lst);
@@ -41,7 +41,6 @@ void			ft_putstr(char *s);
 char			**ft_split(char *s, char c);
 int				ft_isdigit(int x);
 int				ft_atoi(const char *str);
-int				ft_strlen(char *str);
 void			sorting3(t_stack **head, int lenght);
 int				checking_array(char **str);
 int				checking_double(char **str);
