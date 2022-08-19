@@ -6,19 +6,25 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/18 20:51:33 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/19 18:32:10 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PUSHSWAP_H
+# define PUSHSWAP_H
 # include <unistd.h>
-#include <stdio.h>
+# include <stdio.h>
 # include <stdlib.h>
-#include <limits.h>
+# include <limits.h>
+//# include "./printf/ft_printf.h"
+//# include "./get_next_line/get_next_line.h"
+
 typedef struct s_stack{
-	int data;
-	int index;
-	struct s_stack *next;
+	int				data;
+	int				index;
+	struct s_stack	*next;
 }t_stack;
+
 int				ft_strlen(char *str);
 int				ft_atoi(const char *str);
 char			*ft_strjoin(int size, char **strs, char *sep);
@@ -33,20 +39,22 @@ t_stack			*ft_lstnew(int data, int index);
 int				ft_strcal_size(int size, char **str, char *sep);
 void			ft_putstr(char *s);
 char			**ft_split(char *s, char c);
-int 			ft_isdigit(int x);
+int				ft_isdigit(int x);
 int				ft_atoi(const char *str);
 int				ft_strlen(char *str);
-void			sorting3(t_stack **head , int lenght);
+void			sorting3(t_stack **head, int lenght);
 int				checking_array(char **str);
 int				checking_double(char **str);
-int 			checking_sorting(t_stack *stack_a);
-void   			ra(t_stack **stack_a, char *str);
-void 			rra(t_stack    **stack_a, char *str);
-void 			push(t_stack **head1, t_stack **head2, char *str);
-void			ft_swap(t_stack **head , char *str);
+int				checking_sorting(t_stack *stack_a);
+void			ra(t_stack **stack_a, char *str);
+void			rra(t_stack **stack_a, char *str);
+void			push(t_stack **head1, t_stack **head2, char *str);
+void			ft_swap(t_stack **head, char *str);
 char			**ft_free(char **str, int c);
-void 			sorting4(t_stack	**stack_a, t_stack	**stack_b, int	len);
-void 			sorting5(t_stack	**stack_a, t_stack	**stack_b, int	len);
+void			sorting4(t_stack **stack_a, t_stack	**stack_b, int len);
+void			sorting5(t_stack **stack_a, t_stack	**stack_b, int len);
 size_t			ft_total(char const *s, char c);
-int 			finding_min(t_stack	*stack_a);
+int				finding_min(t_stack	*stack_a);
 void			indexing(t_stack *stack_a);
+
+#endif

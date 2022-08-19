@@ -6,11 +6,12 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:25:51 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/15 21:17:53 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/19 15:34:19 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
+
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;

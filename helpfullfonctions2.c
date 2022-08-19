@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:22:23 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/14 20:24:39 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/19 15:33:20 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_putstr(char *s)
 		i++;
 	}
 }
+
 char	**ft_split(char *s, char c)
 {
 	size_t	i;
@@ -54,7 +55,7 @@ char	**ft_split(char *s, char c)
 	return (str);
 }
 
-int ft_isdigit(int x)
+int	ft_isdigit(int x)
 {
 	if (x >= '0' && x <= '9')
 		return (1);
@@ -87,6 +88,7 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
+
 int	ft_strlen(char *str)
 {
 	int	i;

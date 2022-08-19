@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:13:52 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/17 23:19:12 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/19 15:31:41 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	ft_lstsize(t_stack *lst)
 
 {
 	int	len;
+
 	len = 0;
 	while (lst)
 	{
@@ -60,6 +61,7 @@ int	ft_lstsize(t_stack *lst)
 	}
 	return (len);
 }
+
 int	ft_strcal_size(int size, char **str, char *sep)
 {
 	int	i;
@@ -75,5 +77,3 @@ int	ft_strcal_size(int size, char **str, char *sep)
 	len += (ft_strlen(sep) * (size - 1)) + 1;
 	return (len);
 }
-
-
