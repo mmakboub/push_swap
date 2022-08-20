@@ -6,11 +6,11 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:25:51 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/20 21:16:45 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/20 23:51:02 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"pushswap.h"
+#include"pushswap_bonus.h"
 
 char	*ft_strcat(char *dest, char *src)
 {

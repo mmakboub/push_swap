@@ -1,17 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   parsingbns.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/20 21:14:30 by mmakboub         ###   ########.fr       */
+/*   Created: 2022/08/20 21:49:46 by mmakboub          #+#    #+#             */
+/*   Updated: 2022/08/20 23:50:54 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"pushswap.h"
+# include "pushswap_bonus.h"
 
+void	add_to_stack(t_stack	**stack_a, char **str)
+{
+	t_stack	*new;
+	int		i;
+
+	i = 0;
+	while (str[i])
+	{	
+		new = ft_lstnew((ft_atoi(str[i])), i);
+		ft_lstadd_back(stack_a, new);
+		i++;
+	}
+}
+
+int	checking_sorting(t_stack *stack_a)
+{
+	t_stack	*temp;
+
+	temp = stack_a;
+	while (temp && temp->next)
+	{
+		if (temp->data > temp->next->data)
+			return (0);
+		temp = temp->next;
+	}
+	return (1);
+}
 int	checking_array(char **str)
 {
 	int		i;
@@ -57,20 +84,6 @@ int	checking_double(char **str)
 			j++;
 		}
 		i++;
-	}
-	return (1);
-}
-
-int	checking_sorting(t_stack *stack_a)
-{
-	t_stack	*temp;
-
-	temp = stack_a;
-	while (temp && temp->next)
-	{
-		if (temp->data > temp->next->data)
-			return (0);
-		temp = temp->next;
 	}
 	return (1);
 }
