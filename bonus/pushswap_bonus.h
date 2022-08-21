@@ -6,19 +6,19 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 23:52:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 00:42:05 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/21 15:30:48 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSHSWAP_H
-# define PUSHSWAP_H
+#ifndef PUSHSWAP_BONUS_H
+# define PUSHSWAP_BONUS_H
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "./ft_printf/ft_printf.h"
 # include "./get_next_line/get_next_line.h"
-# define BUFFER_SIZE 10
+
+
 typedef struct s_stack{
 	int				data;
 	int				index;
@@ -55,6 +55,6 @@ void 			rr(t_stack **stack_a, t_stack	**stack_b);
 void 			rrr(t_stack **stack_a, t_stack	**stack_b);
 int				ft_strcmp(char *s1, char *s2);
 void			applicate_instructions(char *str, t_stack **stack_a, t_stack **stack_b);
-void			check_instructions(char *str, t_stack **stack_a, t_stack **stack_b);
+void			check_instructions(char *str);
 
 #endif

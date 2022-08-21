@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 21:45:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 00:23:44 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/21 15:38:15 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	applicate_instructions(char *str, t_stack **stack_a, t_stack **stack_b)
 	if(!ft_strcmp(str, "ss\n"))
 		ss(stack_a, stack_b);
 	if(!ft_strcmp(str, "pa\n"))
-		push(stack_a, stack_b);
+		ft_push(stack_a, stack_b);
 	if(!ft_strcmp(str, "pb\n"))
 		ft_push(stack_b, stack_a);
 	if(!ft_strcmp(str, "ra\n"))
@@ -48,7 +48,7 @@ void	applicate_instructions(char *str, t_stack **stack_a, t_stack **stack_b)
 		rrr(stack_a, stack_b);
 }
 	
-void	check_instructions(char *str, t_stack **stack_a, t_stack **stack_b)
+void	check_instructions(char *str)
 {
 	if(ft_strcmp(str, "sa\n") && ft_strcmp(str, "sb\n") && ft_strcmp(str, "ss\n") \
 		&& ft_strcmp(str, "pa\n") && ft_strcmp(str, "pb\n") &&  ft_strcmp(str, "rr\n") \
@@ -81,12 +81,15 @@ int main(int argc, char **argv)
 		if (!checking_double(ptr))
 			return (printf("error1\n"), 0);
 		add_to_stack(&stack_a, ptr);
-		while(1)
+		while(str)
 		{
-			check_instructions(str, stack_a, stack_b);
-			applicate_instructions(str, stack_a, stack_b);
+			check_instructions(str);
+			applicate_instructions(str, &stack_a, &stack_b);
+			free (str);
+			str = get_next_line(0);
+			
 		}
-		if(!checking_sorting(stack_a) && stack_b == NULL)
+		if(checking_sorting(stack_a) && stack_b == NULL)
 			ft_putstr("OK");
 		else
 			ft_putstr("KO");

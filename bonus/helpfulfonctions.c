@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:13:52 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/20 23:51:31 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/21 15:34:21 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,4 @@ int	ft_strcal_size(int size, char **str, char *sep)
 	}
 	len += (ft_strlen(sep) * (size - 1)) + 1;
 	return (len);
-}
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && s1[i] == s2[i])
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
 }
