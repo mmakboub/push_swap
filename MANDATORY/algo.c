@@ -6,55 +6,61 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 15:56:33 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/23 21:35:21 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/24 23:46:39 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap.h"
-void	initstack1(t_stack	*stack_a)
+
+t_stack		*lng_i_sub(t_stack	**stack_a)
 {
-	while(stack_a)
-		stack_a->data = 1;
-		stack_a = stack_a->next;
-}
-t_stack	duplicate_stack(t_stack **stack_a)
-{
-	t_stack **temp;
+	t_stack	*head;
+	t_stack	*tmp;
+	t_stack	*tmp2;
+	t_stack	*tmp3;
+	t_stack	*retour;
+
 	int len;
-	len = ft_lstsize(stack_a);
-	temp = (t_stack **)malloc(sizeof(t_stack));
-	if(!)
-	
-	
-}
-int longest_i_sub(t_stack *stack_a)
-{
-	t_stack	*tab_len;
-	t_stack	*tab_seq;
+	tmp = *stack_a;
+	head = *stack_a;
 	int i;
 	int j;
-	int len;
-	indexing(*stack_a);
-	i = 1;
-	j = 0;
-	len = ft_lstsize(stack_a)
-	tab_len = (int *)malloc(sizeof(int));
-	tab_seq = (int *)malloc(sizeof(int));
-	initstack1(tab_len);
-	while (i < len)
+	int y=0;
+	len = ft_lstsize(stack_a);
+	while (head)
 	{
-		j = 0;
-		while(j < i)
+		i = 1;
+		i = 0;
+		tmp2 = head;
+		tmp2 = tmp3;
+		while(j > len)
 		{
-			if(tab_seq->data < tab_seq->next->data)
+			if(tmp3-> data > tmp2->data)
 			{
-				if(tab_len->data + 1 > tab_len->next->data)
-					tab_len->next->data = tab_len->data + 1 ;
-				tab_seq->data = tab_seq->next->index;
-					
+				i++;
+				tmp3 = tmp2;
 			}
+			j++;
+			tmp2 = tmp2->next;
+			if (!tmp2)
+				tmp2 = tmp;
 		}
-		j++;
+		if (i > y){
+			y =i;
+			retour = head;
+		}
+		head = head->next;
 	}
-	i++;
+	return (retour);
+}
+
+void	sort(t_stack	**stack_a, t_stack	**stack_b)
+{
+	t_stack	*head;
+	
+	while ()
+	{
+	
+	}
+	
 }
