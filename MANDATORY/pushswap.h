@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 00:48:22 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/25 17:12:27 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,11 @@ char			**ft_free(char **str, int c);
 void			sorting4(t_stack **stack_a, t_stack	**stack_b, int len);
 void			sorting5(t_stack **stack_a, t_stack	**stack_b, int len);
 size_t			ft_total(char const *s, char c);
-int				finding_min(t_stack	*stack_a);
+ int				finding_min(t_stack	*stack_a);
 void			indexing(t_stack *stack_a);
 void 			ss(t_stack **stack_a, t_stack	**stack_b, char *str);
 void 			rr(t_stack **stack_a, t_stack	**stack_b, char *str);
 void			rrr(t_stack **stack_a, t_stack	**stack_b, char *str);
+void			getAllIndex(t_stack *stack);
 
 #endif

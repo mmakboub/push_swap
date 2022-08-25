@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:18:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/19 18:34:09 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/25 17:15:07 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,13 @@ int	main(int argc, char **argv)
 	}
 	else
 		exit(0);
+	getAllIndex(stack_a);
 	while (stack_a)
 	{
-		printf("----> %d\n", stack_a->data);
-		//printf("--index--%d\n", stack_a->index);
+		printf("index: %d --------------- value: %d\n", stack_a->index, stack_a->data);
 		stack_a = stack_a->next;
 	}
+	
+	
 	return (0);
 }
