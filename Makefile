@@ -6,11 +6,11 @@
 #    By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 02:37:48 by mmakboub          #+#    #+#              #
-#    Updated: 2022/08/25 17:10:15 by mmakboub         ###   ########.fr        #
+#    Updated: 2022/08/25 23:26:22 by mmakboub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = pushswap
+NAME = push_swap
 NAME_BONUS = checker
 FONCTIONS = ./MANDATORY/addto_stack.c\
 			./MANDATORY/helpfulfonctions.c\
