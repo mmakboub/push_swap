@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 23:52:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 15:30:48 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 17:27:41 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include "./get_next_line/get_next_line.h"
-
 
 typedef struct s_stack{
 	int				data;
@@ -50,11 +49,11 @@ void			ft_push(t_stack **head1, t_stack **head2);
 void			ft_swap(t_stack **head);
 char			**ft_free(char **str, int c);
 size_t			ft_total(char const *s, char c);
-void 			ss(t_stack **stack_a, t_stack	**stack_b);
-void 			rr(t_stack **stack_a, t_stack	**stack_b);
-void 			rrr(t_stack **stack_a, t_stack	**stack_b);
+void			ss(t_stack **stack_a, t_stack **stack_b);
+void			rr(t_stack **stack_a, t_stack **stack_b);
+void			rrr(t_stack **stack_a, t_stack **stack_b);
 int				ft_strcmp(char *s1, char *s2);
-void			applicate_instructions(char *str, t_stack **stack_a, t_stack **stack_b);
+void			apl_instc(char *str, t_stack **stack_a, t_stack **stack_b);
 void			check_instructions(char *str);
 
 #endif

@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 21:49:46 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/20 23:50:54 by mmakboub         ###   ########.fr       */
+/*   Created: 2022/08/26 17:32:36 by mmakboub          #+#    #+#             */
+/*   Updated: 2022/08/26 17:33:11 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "pushswap_bonus.h"
+#include "pushswap_bonus.h"
 
 void	add_to_stack(t_stack	**stack_a, char **str)
 {
@@ -39,6 +39,7 @@ int	checking_sorting(t_stack *stack_a)
 	}
 	return (1);
 }
+
 int	checking_array(char **str)
 {
 	int		i;

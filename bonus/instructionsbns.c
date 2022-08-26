@@ -6,13 +6,13 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:55:02 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 00:23:53 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 17:30:06 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"pushswap_bonus.h"
- 
- void	ft_push(t_stack **head1, t_stack **head2)
+
+void	ft_push(t_stack **head1, t_stack **head2)
 {
 	t_stack	*temp;
 

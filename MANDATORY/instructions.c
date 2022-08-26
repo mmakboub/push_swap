@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/19 16:07:42 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 21:12:32 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,17 +78,3 @@ void	rra(t_stack	**stack_a, char *str)
 	printf("%s", str);
 }
 
-void	indexing(t_stack *stack_a)
-{
-	int		i;
-	t_stack	*top;
-
-	i = 0;
-	top = stack_a;
-	while (top)
-	{
-		top->index = i;
-		top = top->next;
-		i++;
-	}
-}

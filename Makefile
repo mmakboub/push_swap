@@ -6,7 +6,7 @@
 #    By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 02:37:48 by mmakboub          #+#    #+#              #
-#    Updated: 2022/08/25 23:26:22 by mmakboub         ###   ########.fr        #
+#    Updated: 2022/08/26 18:07:43 by mmakboub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ FONCTIONS = ./MANDATORY/addto_stack.c\
 			./MANDATORY/parsing.c\
 			./MANDATORY/pushswap.c\
 			./MANDATORY/sorting.c\
-			./MANDATORY/get_index.c
+			./MANDATORY/algo.c
 
 
 BONUS_FUNCTION = ./bonus/parsingbns.c \

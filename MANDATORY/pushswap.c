@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:18:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/25 23:42:07 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 17:21:28 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,21 +44,5 @@ int	main(int argc, char **argv)
 		else if (len > 5)
 			algo(&stack_a, &stack_b);
 	}
-	// t_stack	*head;
-	// head = stack_a;
-	// while (head)
-	// {
-	// 	printf("index: %d --------------- value: %d\n", head->index, head->data);
-	// 	head = head->next;
-	// }
-	// int x = 2;
-	// int i;
-	// i = 8;
-	// int chift;
-	// while(i >= 0)
-	// {
-	// 	printf("%d", ((x >> i) & 1));
-	// 	i--;
-	// }
 	return (0);
 }

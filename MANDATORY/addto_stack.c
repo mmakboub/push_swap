@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 13:35:50 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/25 17:06:56 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 21:20:23 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,19 @@ int	finding_min(t_stack	*stack_a)
 		top = top->next;
 	}
 	return (index);
+}
+
+void	indexing(t_stack *stack_a)
+{
+	int		i;
+	t_stack	*top;
+
+	i = 0;
+	top = stack_a;
+	while (top)
+	{
+		top->index = i;
+		top = top->next;
+		i++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/25 22:33:57 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 18:09:07 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ void			sorting5(t_stack **stack_a, t_stack	**stack_b, int len);
 size_t			ft_total(char const *s, char c);
 int				finding_min(t_stack	*stack_a);
 void			indexing(t_stack *stack_a);
-void 			ss(t_stack **stack_a, t_stack	**stack_b, char *str);
-void 			rr(t_stack **stack_a, t_stack	**stack_b, char *str);
-void			rrr(t_stack **stack_a, t_stack	**stack_b, char *str);
-void			getAllIndex(t_stack *stack);
+void			ss(t_stack **stack_a, t_stack **stack_b, char *str);
+void			rr(t_stack **stack_a, t_stack **stack_b, char *str);
+void			rrr(t_stack **stack_a, t_stack **stack_b, char *str);
+void			getallindex(t_stack *stack);
 void			algo(t_stack **stack_a, t_stack	**stack_b);
 t_stack			*finding_min2(t_stack	*stack_a);
 
