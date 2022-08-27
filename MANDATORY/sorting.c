@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 18:05:14 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/19 18:33:03 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 22:25:30 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	sorting4(t_stack **stack_a, t_stack **stack_b, int len)
 
 	indexing(*stack_a);
 	minvalue = finding_min(*stack_a);
-	printf("%d\n", minvalue);
 	x = len - minvalue;
 	if (len == 4)
 	{
@@ -45,17 +44,13 @@ void	sorting5(t_stack **stack_a, t_stack **stack_b, int len)
 	int	x;
 
 	minvalue = finding_min(*stack_a);
-	printf("%d\n", minvalue);
 	x = len - minvalue;
 	if (len == 5)
 	{
 		if (2 > minvalue)
 		{
 			while (minvalue--)
-			{
 				ra(stack_a, "ra\n");
-				printf("hii");
-			}
 		}
 		else
 		{
@@ -66,6 +61,17 @@ void	sorting5(t_stack **stack_a, t_stack **stack_b, int len)
 		sorting4(stack_a, stack_b, 4);
 		push(stack_b, stack_a, "pa\n");
 	}
+}
+
+void	sorting3_v2(t_stack **head)
+{
+	if ((*head)->data < (*head)->next->next->data)
+	{
+		ft_swap(head, "sa\n");
+		ra(head, "ra\n");
+	}
+	else
+		rra(head, "rra\n");
 }
 
 void	sorting3(t_stack **head, int lenght)
@@ -91,14 +97,6 @@ void	sorting3(t_stack **head, int lenght)
 		}
 		else if ((*head)->data < (*head)->next->data \
 				&& (*head)->next->data > (*head)->next->next->data)
-		{
-			if ((*head)->data < (*head)->next->next->data)
-			{
-				ft_swap(head, "sa\n");
-				ra(head, "ra\n");
-			}
-			else
-				rra(head, "rra\n");
-		}
+			sorting3_v2(head);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 21:12:32 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:19:14 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	push(t_stack **head1, t_stack **head2, char *str)
 	*head1 = temp->next;
 	temp->next = *head2;
 	*head2 = temp;
-	printf("%s", str);
+	ft_printf("%s", str);
 }
 
 void	ft_swap(t_stack **head, char *str)
@@ -33,7 +33,7 @@ void	ft_swap(t_stack **head, char *str)
 		(*head)->data = (*head)->next->data;
 		(*head)->next->data = swap;
 	}
-	printf("%s", str);
+	ft_printf("%s", str);
 }
 
 void	ra(t_stack **stack_a, char *str)
@@ -54,7 +54,7 @@ void	ra(t_stack **stack_a, char *str)
 		}
 		top = top->next;
 	}
-	printf("%s", str);
+	ft_printf("%s", str);
 }
 
 void	rra(t_stack	**stack_a, char *str)
@@ -75,6 +75,5 @@ void	rra(t_stack	**stack_a, char *str)
 			break ;
 		}
 	}
-	printf("%s", str);
+	ft_printf("%s", str);
 }
-

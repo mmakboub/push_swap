@@ -1,34 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instructions2.c                                    :+:      :+:    :+:   */
+/*   free_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 00:01:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 22:19:27 by mmakboub         ###   ########.fr       */
+/*   Created: 2022/08/27 18:20:15 by mmakboub          #+#    #+#             */
+/*   Updated: 2022/08/27 21:53:44 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"pushswap.h"
+#include "pushswap.h"
 
-void	ss(t_stack **stack_a, t_stack **stack_b, char *str)
+void	ft_lstdelone(t_stack *lst)
 {
-	ft_swap(stack_a, "sa\n");
-	ft_swap(stack_b, "sb\n");
-	ft_printf("%s", str);
+	if (!lst)
+		return ;
+	else
+	{
+		free(lst);
+	}
 }
 
-void	rr(t_stack **stack_a, t_stack **stack_b, char *str)
+void	ft_lstclear(t_stack **lst)
 {
-	ra(stack_a, "ra\n");
-	ra(stack_b, "rb\n");
-	ft_printf("%s", str);
+	t_stack	*temp;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		temp = *lst;
+		*lst = (*lst)-> next;
+		ft_lstdelone(temp);
+	}
+	free(*lst);
+	*lst = NULL;
 }
 
-void	rrr(t_stack **stack_a, t_stack **stack_b, char *str)
+void	print_error(char *str)
 {
-	rra(stack_a, "rra\n");
-	rra(stack_b, "rrb\n");
-	ft_printf("%s", str);
+	(void)str;
+	write(1, "error\n", 6);
+	exit(0);
 }

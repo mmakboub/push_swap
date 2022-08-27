@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 18:09:07 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:23:01 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
-//# include "./get_next_line/get_next_line.h"
+# include "./ft_printf/ft_printf.h"
 
 typedef struct s_stack{
 	int				data;
@@ -41,7 +41,7 @@ char			**ft_split(char *s, char c);
 int				ft_isdigit(int x);
 int				ft_atoi(const char *str);
 void			sorting3(t_stack **head, int lenght);
-int				checking_array(char **str);
+void			checking_array(char **str);
 int				checking_double(char **str);
 int				checking_sorting(t_stack *stack_a);
 void			ra(t_stack **stack_a, char *str);
@@ -60,5 +60,8 @@ void			rrr(t_stack **stack_a, t_stack **stack_b, char *str);
 void			getallindex(t_stack *stack);
 void			algo(t_stack **stack_a, t_stack	**stack_b);
 t_stack			*finding_min2(t_stack	*stack_a);
-
+void			print_error(char *str);
+void			sorting3_v2(t_stack **head);
+void			ft_lstclear(t_stack **lst);
+void			ft_lstdelone(t_stack *lst);
 #endif

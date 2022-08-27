@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 13:35:50 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 21:20:23 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:55:51 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,19 @@ void	add_to_stack(t_stack	**stack_a, char **str)
 
 int	finding_min(t_stack	*stack_a)
 {
-	int		indice;
 	int		index;
 	int		min;
-	t_stack	*top;
 
-	indice = 1;
 	index = 0;
-	top = stack_a;
-	while (top)
+	min = stack_a->data;
+	while (stack_a)
 	{
-		if (indice == 1)
+		if (min > stack_a->data)
 		{
-			min = top->data;
-			indice = 0;
+			min = stack_a->data;
+			index = stack_a->index;
 		}
-		else
-		{
-			if (min > top->data)
-			{
-				min = top->data;
-				index = top->index;
-			}
-		}
-		top = top->next;
+		stack_a = stack_a->next;
 	}
 	return (index);
 }

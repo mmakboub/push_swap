@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:25:51 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/20 21:16:45 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/26 21:51:12 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	while (i < size)
 	{
 		if (strs[i][0] == '\0')
-		{
-			write(1, "error\n", 6);
-			exit(0);
-		}
+			print_error(*strs);
 		ft_strcat(my_str, strs[i]);
 		if (i < size - 1)
 			ft_strcat(my_str, sep);

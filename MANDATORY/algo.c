@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:25:47 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 18:34:41 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 23:27:04 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	max_binary(t_stack	**stack_a)
 	int		max_num;
 	int		max_bit;
 	t_stack	*temp;
-	
+
 	temp = *stack_a;
 	max_bit = 0;
 	len = ft_lstsize(temp);
@@ -73,33 +73,35 @@ int	max_binary(t_stack	**stack_a)
 		++max_bit;
 	return (max_bit);
 }
-
+void alg_a(int i, t_stack **stack_a, t_stack **stack_b) {
+	int j = 0;
+	int len;
+	len = ft_lstsize(*stack_a);
+	while (j < len)
+	{
+		if (((*stack_a)->index >> i) & 1)
+			ra(stack_a, "ra\n");
+		else
+			push(stack_a, stack_b, "pb\n");
+		j++;
+	}
+}
 void	algo(t_stack **stack_a, t_stack	**stack_b)
 {
 	int		i;
 	int		j;
 	int		max_bit;
 	int		len;
-	int		len_b;
 
 	max_bit = max_binary(stack_a);
 	i = 0;
 	getallindex(*stack_a);
 	while (i < max_bit)
 	{
+		alg_a(i, stack_a, stack_b);
+		len = ft_lstsize(*stack_b);
 		j = 0;
-		len = ft_lstsize(*stack_a);
 		while (j < len)
-		{
-			if (((*stack_a)->index >> i) & 1)
-				ra(stack_a, "ra\n");
-			else
-				push(stack_a, stack_b, "pb\n");
-			j++;
-		}
-		len_b = ft_lstsize(*stack_b);
-		j = 0;
-		while (j < len_b)
 		{
 			if ((((*stack_b)->index >> (i + 1)) & 1) == 0 && i != max_bit - 1)
 				ra(stack_b, "rb\n");

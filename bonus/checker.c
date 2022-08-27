@@ -6,11 +6,25 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 21:45:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 17:28:36 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 23:08:38 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap_bonus.h"
+
+void	checkerv2(t_stack **stack_a, t_stack	**stack_b)
+{
+	char *str;
+
+	str = get_next_line(0);
+	while (str != NULL)
+	{
+		check_instructions(str);
+		apl_instc(str, stack_a, stack_b);
+		free (str);
+		str = get_next_line(0);
+	}	
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -33,9 +47,9 @@ void	apl_instc(char *str, t_stack **stack_a, t_stack **stack_b)
 	if (!ft_strcmp(str, "ss\n"))
 		ss(stack_a, stack_b);
 	if (!ft_strcmp(str, "pa\n"))
-		ft_push(stack_a, stack_b);
-	if (!ft_strcmp(str, "pb\n"))
 		ft_push(stack_b, stack_a);
+	if (!ft_strcmp(str, "pb\n"))
+		ft_push(stack_a, stack_b);
 	if (!ft_strcmp(str, "ra\n"))
 		rotate(stack_a);
 	if (!ft_strcmp(str, "rb\n"))
@@ -65,34 +79,29 @@ void	check_instructions(char *str)
 int	main(int argc, char **argv)
 {
 	char	**ptr;
-	char	*sep;
+	char	*sptr;
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	char	*str;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	sep = " ";
-	str = get_next_line(0);
 	if (argc == 1)
 		exit(0);
 	else
 	{
-		ptr = ft_split(ft_strjoin(argc - 1, argv + 1, sep), ' ');
+		sptr = ft_strjoin(argc - 1, argv + 1, " ");
+		ptr = ft_split(sptr, ' ');
+		free(sptr);
 		checking_array(ptr);
 		if (!checking_double(ptr))
-			return (printf("error1\n"), 0);
+			return (write(1, "error\n", 6), 0);
 		add_to_stack(&stack_a, ptr);
-		while (str)
-		{
-			check_instructions(str);
-			apl_instc(str, &stack_a, &stack_b);
-			free (str);
-			str = get_next_line(0);
-		}
+		checkerv2(&stack_a, &stack_b);
 		if (checking_sorting(stack_a) && stack_b == NULL)
 			ft_putstr("OK");
 		else
 			ft_putstr("KO");
 	}
+	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 17:32:36 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 17:33:11 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:26:49 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	checking_sorting(t_stack *stack_a)
 	return (1);
 }
 
-int	checking_array(char **str)
+void	checking_array(char **str)
 {
 	int		i;
 	int		y;
@@ -51,22 +51,21 @@ int	checking_array(char **str)
 	while (str[i])
 	{
 		if (str[i][0] != '-' && str[i][0] != '+' && !ft_isdigit (str[i][0]))
-			return (printf("error2\n"), 0);
+			print_error(*str);
 		if (str[i][1] == '\0' && !ft_isdigit (str[i][0]))
-			return (printf("error22\n"), exit (0), 0);
+			print_error(*str);
 		y = 1;
 		while (str[i][y])
 		{
 			if (str[i][y] < '0' || str[i][y] > '9')
-				return (printf("error3\n"), 0);
+				print_error(*str);
 			y++;
 		}
 		nbr = ft_atoi(str[i]);
 		if (nbr > 2147483647 || nbr < INT_MIN)
-			return (printf("error4\n"), 0);
+			print_error(*str);
 		i++;
 	}
-	return (1);
 }
 
 int	checking_double(char **str)

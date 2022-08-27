@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:55:02 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 17:30:06 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:34:22 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_push(t_stack **head1, t_stack **head2)
 {
 	t_stack	*temp;
 
+	if (!(*head1))
+	{
+		write(1, "KO", 2);
+		exit(1);
+	}
 	temp = *head1;
 	*head1 = temp->next;
 	temp->next = *head2;
@@ -31,6 +36,11 @@ void	ft_swap(t_stack **head)
 		swap = (*head)->data;
 		(*head)->data = (*head)->next->data;
 		(*head)->next->data = swap;
+	}
+	else
+	{
+		write(1, "KO", 2);
+		exit(1);
 	}
 }
 

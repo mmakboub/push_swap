@@ -6,7 +6,7 @@
 #    By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 02:37:48 by mmakboub          #+#    #+#              #
-#    Updated: 2022/08/26 18:07:43 by mmakboub         ###   ########.fr        #
+#    Updated: 2022/08/27 22:22:48 by mmakboub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,12 @@ FONCTIONS = ./MANDATORY/addto_stack.c\
 			./MANDATORY/parsing.c\
 			./MANDATORY/pushswap.c\
 			./MANDATORY/sorting.c\
-			./MANDATORY/algo.c
+			./MANDATORY/algo.c\
+			./MANDATORY/free_stacks.c\
+			./MANDATORY/ft_printf/fct_auxil_hex.c\
+			./MANDATORY/ft_printf/ft_fctauxiliare.c\
+			./MANDATORY/ft_printf/ft_printf.c
+
 
 
 BONUS_FUNCTION = ./bonus/parsingbns.c \
@@ -31,7 +36,8 @@ BONUS_FUNCTION = ./bonus/parsingbns.c \
 			./bonus/get_next_line/get_next_line.c\
 			./bonus/get_next_line/get_next_line_utils.c\
 			./bonus/helpfulfonctions.c\
-			./bonus/checker.c
+			./bonus/checker.c\
+			./bonus/my_free.c
 
 			
 CC = cc

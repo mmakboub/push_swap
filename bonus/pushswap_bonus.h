@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 23:52:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 17:27:41 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:17:02 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			ft_putstr(char *s);
 char			**ft_split(char *s, char c);
 int				ft_isdigit(int x);
 int				ft_atoi(const char *str);
-int				checking_array(char **str);
+void			checking_array(char **str);
 int				checking_double(char **str);
 int				checking_sorting(t_stack *stack_a);
 void			rotate(t_stack **stack_a);
@@ -55,5 +55,9 @@ void			rrr(t_stack **stack_a, t_stack **stack_b);
 int				ft_strcmp(char *s1, char *s2);
 void			apl_instc(char *str, t_stack **stack_a, t_stack **stack_b);
 void			check_instructions(char *str);
+void			print_error(char *str);
+void			ft_lstclear(t_stack **lst);
+void			ft_lstdelone(t_stack *lst);
+void			freefnct(char **str);
 
 #endif
