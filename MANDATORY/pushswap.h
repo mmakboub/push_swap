@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:53:22 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 22:23:01 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:06:43 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <limits.h>
 # include "./ft_printf/ft_printf.h"
 
 typedef struct s_stack{
@@ -25,7 +24,7 @@ typedef struct s_stack{
 }t_stack;
 
 size_t			ft_strlen(const char *str);
-int				ft_atoi(const char *str);
+long long		ft_atoi(const char *str);
 char			*ft_strjoin(int size, char **strs, char *sep);
 int				ft_lstsize(t_stack *lst);
 void			ft_lstadd_back(t_stack **alst, t_stack *new);
@@ -39,13 +38,12 @@ int				ft_strcal_size(int size, char **str, char *sep);
 void			ft_putstr(char *s);
 char			**ft_split(char *s, char c);
 int				ft_isdigit(int x);
-int				ft_atoi(const char *str);
 void			sorting3(t_stack **head, int lenght);
 void			checking_array(char **str);
 int				checking_double(char **str);
 int				checking_sorting(t_stack *stack_a);
-void			ra(t_stack **stack_a, char *str);
-void			rra(t_stack **stack_a, char *str);
+void			rotate(t_stack **stack_a, char *str);
+void			reverse_rotate(t_stack **stack_a, char *str);
 void			push(t_stack **head1, t_stack **head2, char *str);
 void			ft_swap(t_stack **head, char *str);
 char			**ft_free(char **str, int c);

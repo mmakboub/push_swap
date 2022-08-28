@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:13:52 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 17:21:49 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 17:48:40 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	ft_lstadd_back(t_stack **alst, t_stack *new)
 
 void	ft_lstadd_front(t_stack **alst, t_stack *new)
 {
+	if (new == NULL)
+		return ;
 	new -> next = *alst;
 	*alst = new;
 }

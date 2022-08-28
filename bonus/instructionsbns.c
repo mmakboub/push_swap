@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:55:02 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 21:34:22 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 17:49:03 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 void	ft_push(t_stack **head1, t_stack **head2)
 {
 	t_stack	*temp;
+	int		len;
 
-	if (!(*head1))
+	len = ft_lstsize(*head1);
+	if (len == 0)
 	{
-		write(1, "KO", 2);
-		exit(1);
+		return ;
 	}
 	temp = *head1;
 	*head1 = temp->next;
@@ -30,17 +31,18 @@ void	ft_push(t_stack **head1, t_stack **head2)
 void	ft_swap(t_stack **head)
 {
 	int	swap;
+	int	len;
 
-	if (head && (*head)->next)
+	len = ft_lstsize(*head);
+	if (*head && (*head)->next)
 	{
 		swap = (*head)->data;
 		(*head)->data = (*head)->next->data;
 		(*head)->next->data = swap;
 	}
-	else
+	if (len == 0)
 	{
-		write(1, "KO", 2);
-		exit(1);
+		return ;
 	}
 }
 
@@ -72,11 +74,11 @@ void	reverse_rotate(t_stack	**stack_a)
 	top = *stack_a;
 	while (top)
 	{
-		if (top->next->next != NULL)
+		if (top->next != NULL && top->next->next != NULL)
 			top = top->next;
 		else
 		{
-			end = top ->next;
+			end = top->next;
 			top->next = NULL;
 			ft_lstadd_front (stack_a, end);
 			break ;

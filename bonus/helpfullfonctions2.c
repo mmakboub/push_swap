@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:22:23 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/21 15:30:43 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:04:07 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ int	ft_isdigit(int x)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
-	int	sign;
+	int			i;
+	long long	result;
+	long long	sign;
 
 	sign = 1;
 	result = 0;

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 17:32:36 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 22:26:49 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:06:19 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,20 @@ int	checking_sorting(t_stack *stack_a)
 
 void	checking_array(char **str)
 {
-	int		i;
-	int		y;
-	long	nbr;
+	int			i;
+	int			y;
+	long long	nbr;
 
-	i = 1;
+	i = 0;
 	y = 0;
 	while (str[i])
 	{
 		if (str[i][0] != '-' && str[i][0] != '+' && !ft_isdigit (str[i][0]))
 			print_error(*str);
 		if (str[i][1] == '\0' && !ft_isdigit (str[i][0]))
+			print_error(*str);
+		nbr = ft_atoi(str[i]);
+		if (nbr > 2147483647 || nbr < -2147483648)
 			print_error(*str);
 		y = 1;
 		while (str[i][y])
@@ -61,9 +64,6 @@ void	checking_array(char **str)
 				print_error(*str);
 			y++;
 		}
-		nbr = ft_atoi(str[i]);
-		if (nbr > 2147483647 || nbr < INT_MIN)
-			print_error(*str);
 		i++;
 	}
 }
@@ -86,4 +86,16 @@ int	checking_double(char **str)
 		i++;
 	}
 	return (1);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' && s2[i] != '\0') && s1[i] == s2[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

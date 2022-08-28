@@ -6,7 +6,7 @@
 #    By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/20 02:37:48 by mmakboub          #+#    #+#              #
-#    Updated: 2022/08/27 22:22:48 by mmakboub         ###   ########.fr        #
+#    Updated: 2022/08/28 16:34:04 by mmakboub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ FONCTIONS = ./MANDATORY/addto_stack.c\
 			./MANDATORY/helpfullfonctions2.c\
 			./MANDATORY/helpfullfonctions3.c\
 			./MANDATORY/instructions.c\
+			./MANDATORY/instructions2.c\
 			./MANDATORY/parsing.c\
 			./MANDATORY/pushswap.c\
 			./MANDATORY/sorting.c\

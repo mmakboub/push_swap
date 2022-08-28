@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 20:18:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 23:18:45 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:20:55 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ static void	freefnct(char **str)
 		free(str[i++]);
 	free(str);
 }
-static void algo_s(t_stack **stack_a, t_stack **stack_b) {
-	int len;
-	
+
+static void	algo_s(t_stack **stack_a, t_stack **stack_b)
+{
+	int	len;
+
 	len = ft_lstsize(*stack_a);
 	if (len == 1 || len == 0)
 		exit(0);
@@ -36,6 +38,7 @@ static void algo_s(t_stack **stack_a, t_stack **stack_b) {
 	else if (len > 5)
 		algo(stack_a, stack_b);
 }
+
 int	main(int argc, char **argv)
 {
 	char	**str;

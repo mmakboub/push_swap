@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:50:27 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 22:19:14 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 17:37:26 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_swap(t_stack **head, char *str)
 	ft_printf("%s", str);
 }
 
-void	ra(t_stack **stack_a, char *str)
+void	rotate(t_stack **stack_a, char *str)
 {
 	t_stack	*top;
 	t_stack	*tmp;
@@ -57,7 +57,7 @@ void	ra(t_stack **stack_a, char *str)
 	ft_printf("%s", str);
 }
 
-void	rra(t_stack	**stack_a, char *str)
+void	reverse_rotate(t_stack	**stack_a, char *str)
 {
 	t_stack	*top;
 	t_stack	*end;

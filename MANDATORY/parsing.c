@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:57:21 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/26 21:38:26 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:15:00 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 void	checking_array(char **str)
 {
-	int		i;
-	int		y;
-	long	nbr;
+	int			i;
+	int			y;
+	long long	nbr;
 
-	i = 1;
+	i = 0;
 	y = 0;
 	while (str[i])
 	{
 		if (str[i][0] != '-' && str[i][0] != '+' && !ft_isdigit (str[i][0]))
 			print_error(*str);
 		if (str[i][1] == '\0' && !ft_isdigit (str[i][0]))
+			print_error(*str);
+		nbr = ft_atoi(str[i]);
+		printf("%lld\n", nbr);
+		if (nbr > 2147483647 || nbr < -2147483648)
 			print_error(*str);
 		y = 1;
 		while (str[i][y])
@@ -33,9 +37,6 @@ void	checking_array(char **str)
 				print_error(*str);
 			y++;
 		}
-		nbr = ft_atoi(str[i]);
-		if (nbr > 2147483647 || nbr < INT_MIN)
-			print_error(*str);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 23:52:03 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 22:17:02 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:06:49 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <limits.h>
 # include "./get_next_line/get_next_line.h"
 
 typedef struct s_stack{
@@ -25,7 +24,7 @@ typedef struct s_stack{
 }t_stack;
 
 size_t			ft_strlen(const char *str);
-int				ft_atoi(const char *str);
+long long		ft_atoi(const char *str);
 char			*ft_strjoin(int size, char **strs, char *sep);
 int				ft_lstsize(t_stack *lst);
 void			ft_lstadd_back(t_stack **alst, t_stack *new);
@@ -39,7 +38,6 @@ int				ft_strcal_size(int size, char **str, char *sep);
 void			ft_putstr(char *s);
 char			**ft_split(char *s, char c);
 int				ft_isdigit(int x);
-int				ft_atoi(const char *str);
 void			checking_array(char **str);
 int				checking_double(char **str);
 int				checking_sorting(t_stack *stack_a);
@@ -59,5 +57,6 @@ void			print_error(char *str);
 void			ft_lstclear(t_stack **lst);
 void			ft_lstdelone(t_stack *lst);
 void			freefnct(char **str);
+//void			puting_checker(t_stack	*stack_a, t_stack	*stack_b);
 
 #endif

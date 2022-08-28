@@ -6,7 +6,7 @@
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:25:47 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/08/27 23:27:04 by mmakboub         ###   ########.fr       */
+/*   Updated: 2022/08/28 17:49:33 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,24 @@ int	max_binary(t_stack	**stack_a)
 		++max_bit;
 	return (max_bit);
 }
-void alg_a(int i, t_stack **stack_a, t_stack **stack_b) {
-	int j = 0;
-	int len;
+
+void	alg_a(int i, t_stack **stack_a, t_stack **stack_b)
+{
+	int	j;
+	int	len;
+
 	len = ft_lstsize(*stack_a);
+	j = 0;
 	while (j < len)
 	{
 		if (((*stack_a)->index >> i) & 1)
-			ra(stack_a, "ra\n");
+			rotate(stack_a, "ra\n");
 		else
 			push(stack_a, stack_b, "pb\n");
 		j++;
 	}
 }
+
 void	algo(t_stack **stack_a, t_stack	**stack_b)
 {
 	int		i;
@@ -104,7 +109,7 @@ void	algo(t_stack **stack_a, t_stack	**stack_b)
 		while (j < len)
 		{
 			if ((((*stack_b)->index >> (i + 1)) & 1) == 0 && i != max_bit - 1)
-				ra(stack_b, "rb\n");
+				rotate(stack_b, "rb\n");
 			else
 				push(stack_b, stack_a, "pa\n");
 			j++;
